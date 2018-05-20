@@ -38,19 +38,17 @@ public class UserController {
         return "testRole success";
     }
 
-
+    @RequiresRoles("admin")
     @GetMapping("/testRole1")
     public String testRole1() {
         return "testRole success";
     }
 
-
-
+    @RequiresPermissions("user:delete")
     @GetMapping("/testPerms")
     public String testPermission() {
         return "testPermission success";
     }
-
 
 
     @GetMapping("/testPerms1")

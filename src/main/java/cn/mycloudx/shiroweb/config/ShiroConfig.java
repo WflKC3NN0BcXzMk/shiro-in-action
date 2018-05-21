@@ -98,9 +98,9 @@ public class ShiroConfig {
 
     @Bean
     public SessionManager sessionManager() {
-        DefaultWebSessionManager CustomSessionManager = new CustomSessionManager();
-        CustomSessionManager.setSessionDAO(sessionDAO);
-        return CustomSessionManager;
+        DefaultWebSessionManager customSessionManager = new CustomSessionManager();
+        customSessionManager.setSessionDAO(sessionDAO);
+        return customSessionManager;
     }
 
 
